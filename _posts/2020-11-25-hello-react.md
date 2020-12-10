@@ -48,4 +48,4 @@ RWD 也沒有問題！
 使用技術：React.js, React Hooks
 
 
-欸，對，他上線了，在這裡: <a class="highlighter" href="#">resume</a>
+欸，對，他上線了，在這裡: <a class="highlighter" href="https://chiaweiwu.github.io/resume">resume</a>

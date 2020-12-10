@@ -18,7 +18,7 @@ var documents = [{
     "id": 3,
     "url": "http://localhost:4000/",
     "title": "Home",
-    "body": "      Featured:                                                                                                                                                                                                           今年黑五不購物，讀書去~                              :               那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React. js 啦？:                                                         All Stories:                                                                                               今年黑五不購物，讀書去~              :       那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React. js 啦？:               "
+    "body": "      Featured:                                                                                                                                                                                                           預備中，寫一次 code 就蘋果和安卓都能產生 app 的 神奇框架 -- NativeScript                              :               準備中，先讓 Sushi hold住全場！:                                                                                                                                                                                                                                                     今年黑五不購物，讀書去~                              :               那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React. js 啦？:                                                         All Stories:                                                                                             預備中，寫一次 code 就蘋果和安卓都能產生 app 的 神奇框架 -- NativeScript              :       準備中，先讓 Sushi hold住全場！:                                                                                               今年黑五不購物，讀書去~              :       那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React. js 啦？:               "
     }, {
     "id": 4,
     "url": "http://localhost:4000/robots.txt",
@@ -26,6 +26,11 @@ var documents = [{
     "body": "      Sitemap: {{ “sitemap. xml”   absolute_url }}   "
     }, {
     "id": 5,
+    "url": "http://localhost:4000/hello-native-script/",
+    "title": "預備中，寫一次 code 就蘋果和安卓都能產生 app 的 神奇框架 -- NativeScript",
+    "body": "2020/12/11 - 準備中，先讓 Sushi hold住全場！ "
+    }, {
+    "id": 6,
     "url": "http://localhost:4000/hello-react/",
     "title": "今年黑五不購物，讀書去~",
     "body": "2020/11/25 - 那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React. js 啦？ 今年黑五不購物，讀書去~: 如題，去年的黑五我在打LoL、吃牛排，今年的我，不一樣了！我讀書。 我是一個平凡的 Angular 工程師，直到在誠品看到了一本 React. js 的教學書。於是，我變成了一個，會一點點 React. js 的前端工程師。 這週的星期五就是黑色星期五了，黑色星期五想必是要大大的購物一番，不過，因為我買到了這本書，我便一頭栽進去 React. js 的世界。 今年的黑五，都在看書和寫扣。 在這一週，我學會了 + 花費時間: 這一週每天約花五個小時念這本書，因為我的中文程度只有小學四年級。所以我需要花費大量時間理解 Concept，轉成英文確保自己理解後，再繼續實作。 於是他變成了這樣： 接下來的週末兩天，星期五花了 7 小時，星期六花了 5 小時，於是，新版的履歷就生出來囉！ 之前我的履歷長這樣 現在的履歷，登登！ RWD 也沒有問題！ 使用技術：React. js, React Hooks 欸，對，他上線了，在這裡: resume "
