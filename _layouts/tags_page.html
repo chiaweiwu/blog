@@ -10,7 +10,7 @@
 
     <link
         rel="icon"
-        href="{{ "/" | relative_url }}assets/images/logo.png"
+        href="{{ site.baseurl }}/assets/images/logo.png"
     >
 
     <title>{{ page.title }} | {{site.name}}</title>
@@ -25,16 +25,16 @@
     >
 
     <link
-        href="{{ "/" | relative_url }}assets/css/screen.css"
+        href="{{ site.baseurl }}/assets/css/screen.css"
         rel="stylesheet"
     >
 
     <link
-        href="{{ "/" | relative_url }}assets/css/main.css"
+        href="{{ site.baseurl }}/assets/css/main.css"
         rel="stylesheet"
     >
 
-    <script src="{{ "/" | relative_url }}assets/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
 </head>
 
@@ -79,7 +79,7 @@
             <!-- Begin Logo -->
             <a
                 class="navbar-brand"
-                href="{{ "/" | relative_url }}"
+                href="{{ site.baseurl }}/"
             >
                 {{ site.name }}
             </a>
@@ -114,7 +114,7 @@
 
                         <a
                             class="nav-link"
-                            href="{{ "/" | relative_url }}index.html"
+                            href="{{ site.baseurl }}/index.html"
                         >Home</a>
                     </li>
 
@@ -143,14 +143,14 @@
                     {% for tag in tags_list %}
                     <a
                         class="mr-1"
-                        href="{{"/" | relative_url}}/tags#{{ tag | url_escape | strip | replace: ' ', '-' }}"
+                        href="{{site.baseurl}}/tags#{{ tag | url_escape | strip | replace: ' ', '-' }}"
                     >{{ tag | camelcase }} ({{ site.tags[tag].size }})</a>
                     {% endfor %}
                     {% else %}
                     {% for tag in tags_list %}
                     <a
                         class="mr-1"
-                        href="{{"/" | relative_url}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}"
+                        href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}"
                     >{{ tag[0] | camelcase }} ({{ tag[1].size }})</a>
                     {% endfor %}
                     {% endif %}
@@ -187,13 +187,13 @@
         crossorigin="anonymous"
     ></script>
 
-    <script src="{{ "/" | relative_url }}assets/js/mediumish.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
 
     {% if site.lazyimages == "enabled" %}
-    <script src="{{ "/" | relative_url }}assets/js/lazyload.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
     {% endif %}
 
-    <script src="{{ "/" | relative_url }}assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 
 </body>

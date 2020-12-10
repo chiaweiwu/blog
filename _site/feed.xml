@@ -4,9 +4,9 @@
     <title>C's Notes</title>
     <description>一個半路出家前端的學習筆記。</description>
     <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Dec 2020 02:55:37 +0800</pubDate>
-    <lastBuildDate>Fri, 11 Dec 2020 02:55:37 +0800</lastBuildDate>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 11 Dec 2020 03:16:41 +0800</pubDate>
+    <lastBuildDate>Fri, 11 Dec 2020 03:16:41 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -48,8 +48,8 @@
 &lt;p&gt;欸，對，他上線了，在這裡: &lt;a class=&quot;highlighter&quot; href=&quot;#&quot;&gt;resume&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 25 Nov 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000//hello-react/</link>
-        <guid isPermaLink="true">http://localhost:4000//hello-react/</guid>
+        <link>http://localhost:4000/hello-react/</link>
+        <guid isPermaLink="true">http://localhost:4000/hello-react/</guid>
         
         <category>React</category>
         

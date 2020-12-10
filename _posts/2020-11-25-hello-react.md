@@ -22,28 +22,28 @@ hidden: false
 
 今年的黑五，都在看書和寫扣。
 
-![book]({{ "/" | relative_url }}assets/images/react/1.jpg)
+![book]({{ site.baseurl }}/assets/images/react/1.jpg)
 
 #### 在這一週，我學會了 + 花費時間
 這一週每天約花五個小時念這本書，因為我的中文程度只有小學四年級。所以我需要花費大量時間理解 Concept，轉成英文確保自己理解後，再繼續實作。
 
 於是他變成了這樣：
 
-![readBook]({{ "/" | relative_url }}assets/images/react/2.jpg)
+![readBook]({{ site.baseurl }}/assets/images/react/2.jpg)
 
 接下來的週末兩天，星期五花了 7 小時，星期六花了 5 小時，於是，新版的履歷就生出來囉！
 
 之前我的履歷長這樣
-![origResume]({{ "/" | relative_url }}assets/images/react/3.png)
+![origResume]({{ site.baseurl }}/assets/images/react/3.png)
 
 
 現在的履歷，登登！
-![newResume]({{ "/" | relative_url }}assets/images/react/4.jpg)
+![newResume]({{ site.baseurl }}/assets/images/react/4.jpg)
 
 
 
 RWD 也沒有問題！
-![newResumeRWD]({{ "/" | relative_url }}assets/images/react/5.png)
+![newResumeRWD]({{ site.baseurl }}/assets/images/react/5.png)
 
 使用技術：React.js, React Hooks
 
