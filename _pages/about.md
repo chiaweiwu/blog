@@ -16,7 +16,7 @@ comments: false
 <p class="mb-5"> When I am not coding or designing, you can usually find me shooting portrait photography, diving into another new JavaScript framework just for fun or walking around with a cup of tea on a sunny day.</p>
 
 <p>
-<a class="highlighter resume" href="#" target="_blank">resume</a>
+<a class="highlighter resume" href="https://chiaweiwu.github.io/resume" target="_blank">resume</a>
 </p>
 
 </div>

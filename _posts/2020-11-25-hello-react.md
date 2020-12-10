@@ -5,7 +5,7 @@ author: cwu
 categories: [ study notes, new framework! ]
 tags: [React, React Hooks]
 image: assets/images/react/0.jpg
-description: "哈囉，我久違的 React"
+description: "那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React.js 啦？"
 featured: true
 hidden: false
 ---
