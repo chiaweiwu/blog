@@ -3,10 +3,10 @@
   <channel>
     <title>C's Notes</title>
     <description>一個半路出家前端的學習筆記。</description>
-    <link>http://localhost:4000/blog/</link>
-    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Dec 2020 02:47:15 +0800</pubDate>
-    <lastBuildDate>Fri, 11 Dec 2020 02:47:15 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 11 Dec 2020 02:55:37 +0800</pubDate>
+    <lastBuildDate>Fri, 11 Dec 2020 02:55:37 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -23,33 +23,33 @@
 
 &lt;p&gt;今年的黑五，都在看書和寫扣。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/react/1.jpg&quot; alt=&quot;book&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/react/1.jpg&quot; alt=&quot;book&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;在這一週我學會了--花費時間&quot;&gt;在這一週，我學會了 + 花費時間&lt;/h4&gt;
 &lt;p&gt;這一週每天約花五個小時念這本書，因為我的中文程度只有小學四年級。所以我需要花費大量時間理解 Concept，轉成英文確保自己理解後，再繼續實作。&lt;/p&gt;
 
 &lt;p&gt;於是他變成了這樣：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/react/2.jpg&quot; alt=&quot;readBook&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/react/2.jpg&quot; alt=&quot;readBook&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;接下來的週末兩天，星期五花了 7 小時，星期六花了 5 小時，於是，新版的履歷就生出來囉！&lt;/p&gt;
 
 &lt;p&gt;之前我的履歷長這樣
-&lt;img src=&quot;/blog/assets/images/react/3.png&quot; alt=&quot;origResume&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/react/3.png&quot; alt=&quot;origResume&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;現在的履歷，登登！
-&lt;img src=&quot;/blog/assets/images/react/4.jpg&quot; alt=&quot;newResume&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/react/4.jpg&quot; alt=&quot;newResume&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;RWD 也沒有問題！
-&lt;img src=&quot;/blog/assets/images/react/5.png&quot; alt=&quot;newResumeRWD&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/react/5.png&quot; alt=&quot;newResumeRWD&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;使用技術：React.js, React Hooks&lt;/p&gt;
 
 &lt;p&gt;欸，對，他上線了，在這裡: &lt;a class=&quot;highlighter&quot; href=&quot;#&quot;&gt;resume&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 25 Nov 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/hello-react/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/hello-react/</guid>
+        <link>http://localhost:4000//hello-react/</link>
+        <guid isPermaLink="true">http://localhost:4000//hello-react/</guid>
         
         <category>React</category>
         
