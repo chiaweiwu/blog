@@ -4,7 +4,7 @@ title: "C's Notes"
 description: "一個半路出家前端的學習筆記。"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /blog
+baseurl: /
 google_analytics: ''
 include: ["_pages"]
 permalink: /:title/
