@@ -10,7 +10,7 @@
 
     <link
         rel="icon"
-        href="{{ site.baseurl }}/assets/images/logo.png"
+        href="{{ site.baseurl}}/assets/images/logo.png"
     >
 
     <title>{{ page.title }} | {{site.name}}</title>
@@ -25,16 +25,16 @@
     >
 
     <link
-        href="{{ site.baseurl }}/assets/css/screen.css"
+        href="{{ site.baseurl}}/assets/css/screen.css"
         rel="stylesheet"
     >
 
     <link
-        href="{{ site.baseurl }}/assets/css/main.css"
+        href="{{ site.baseurl}}/assets/css/main.css"
         rel="stylesheet"
     >
 
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl}}/assets/js/jquery.min.js"></script>
 
 </head>
 
@@ -79,7 +79,7 @@
             <!-- Begin Logo -->
             <a
                 class="navbar-brand"
-                href="{{ site.baseurl }}/"
+                href="{{ site.baseurl}}/"
             >
                 {{ site.name }}
             </a>
@@ -114,7 +114,7 @@
 
                         <a
                             class="nav-link"
-                            href="{{ site.baseurl }}/index.html"
+                            href="{{ site.baseurl}}/index.html"
                         >Home</a>
                     </li>
 
@@ -162,14 +162,14 @@
                     {% for category in categories_list %}
                     <a
                         class="mt-1 mb-1"
-                        href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}"
+                        href="{{"/" | relative_url}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}"
                     >{{ category | camelcase }} ({{ site.tags[category].size }})</a>
                     {% endfor %}
                     {% else %}
                     {% for category in categories_list %}
                     <a
                         class="mt-1 mb-1"
-                        href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"
+                        href="{{"/" | relative_url}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"
                     >{{ category[0] | camelcase }} ({{ category[1].size }})</a>
                     {% endfor %}
                     {% endif %}
@@ -178,7 +178,7 @@
             </div>
         </div>
 
-    {% include footer.html %}
+        {% include footer.html %}
 
     </div> <!-- /.site-content -->
 
@@ -197,13 +197,13 @@
         crossorigin="anonymous"
     ></script>
 
-    <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
+    <script src="{{ site.baseurl}}/assets/js/mediumish.js"></script>
 
     {% if site.lazyimages == "enabled" %}
-    <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+    <script src="{{ site.baseurl}}/assets/js/lazyload.js"></script>
     {% endif %}
 
-    <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{{ site.baseurl}}/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 
 </body>
