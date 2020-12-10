@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    >
+
+    <link
+        rel="icon"
+        href="/blog/assets/images/logo.png"
+    >
+
+    <title>今年黑五不購物，讀書去~ | Hi, I'm C.</title>
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>今年黑五不購物，讀書去~ | C’s Notes</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="今年黑五不購物，讀書去~" />
+<meta name="author" content="cwu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="哈囉，我久違的 React" />
+<meta property="og:description" content="哈囉，我久違的 React" />
+<link rel="canonical" href="http://localhost:4000/blog/hello-react/" />
+<meta property="og:url" content="http://localhost:4000/blog/hello-react/" />
+<meta property="og:site_name" content="C’s Notes" />
+<meta property="og:image" content="http://localhost:4000/blog/assets/images/react/0.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-11T00:00:00+08:00" />
+<script type="application/ld+json">
+{"headline":"今年黑五不購物，讀書去~","dateModified":"2020-11-11T00:00:00+08:00","datePublished":"2020-11-11T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/hello-react/"},"author":{"@type":"Person","name":"cwu"},"url":"http://localhost:4000/blog/hello-react/","image":"http://localhost:4000/blog/assets/images/react/0.jpg","description":"哈囉，我久違的 React","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/blog/assets/images/logo.png"},"name":"cwu"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"
+    >
+
+    <link
+        href="/blog/assets/css/screen.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="/blog/assets/css/main.css"
+        rel="stylesheet"
+    >
+
+    <script src="/blog/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+
+<body class="layout-post">
+    <!-- defer loading of font and font awesome -->
+    <noscript id="deferred-styles">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&family=Noto+Sans+TC:wght@300;700&display=swap"
+            rel="stylesheet"
+        >
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+            crossorigin="anonymous"
+        >
+    </noscript>
+
+
+    <!-- Begin Menu Navigation
+================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+        <div class="container p-0">
+
+            <!-- Begin Logo -->
+            <a
+                class="navbar-brand"
+                href="/blog/"
+            >
+                Hi, I'm C.
+            </a>
+            <!-- End Logo -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarMediumish"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarMediumish"
+            >
+
+                <!-- Begin Menu -->
+
+                <ul class="navbar-nav ml-auto">
+
+                    
+                    <li class="nav-item">
+                        
+
+                        <a
+                            class="nav-link"
+                            href="/blog/index.html"
+                        >Home</a>
+                    </li>
+
+                    <li class="nav-item">
+<a class="nav-link" href="/blog/about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="/blog/categories">Categories</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="/blog/tags">Tags</a>
+</li>
+
+<script src="/blog/assets/js/lunr.js"></script>
+
+
+<style>
+    .modal-body ul.mb-0 {padding: .5rem 1rem;}
+    .lunrsearchresult .title {color: #323643; background-color: #B6EDEC;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #323643;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+    .lunrsearchresult { list-style-type: none;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/blog/assets/js/lunrsearchengine.js"></script>
+
+                </ul>
+
+                <!-- End Menu -->
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- End Navigation
+================================================== -->
+
+    <div class="site-content">
+
+        <div class="container">
+
+
+            <!-- Content
+================================================== -->
+            <div class="main-content">
+                <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=今年黑五不購物，讀書去~&url=http://localhost:4000/blog/hello-react/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/hello-react/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/hello-react/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+                <!-- Post Title -->
+                <h1 class="posttitle">今年黑五不購物，讀書去~</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img
+                class="featured-image img-fluid"
+                src="/blog/assets/images/react/0.jpg"
+                alt="今年黑五不購物，讀書去~"
+            >
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React.js 啦？</p>
+
+<h4 id="今年黑五不購物讀書去">今年黑五不購物，讀書去~</h4>
+
+<p>如題，去年的黑五我在打LoL、吃牛排，今年的我，不一樣了！我讀書。</p>
+
+<p>我是一個平凡的 Angular 工程師，直到在誠品看到了一本 React.js 的教學書。於是，我變成了一個，會一點點 React.js 的前端工程師。</p>
+
+<p>這週的星期五就是黑色星期五了，黑色星期五想必是要大大的購物一番，不過，因為我買到了這本書，我便一頭栽進去 React.js 的世界。</p>
+
+<p>今年的黑五，都在看書和寫扣。</p>
+
+<p><img src="/blog/assets/images/react/1.jpg" alt="book" /></p>
+
+<h4 id="在這一週我學會了--花費時間">在這一週，我學會了 + 花費時間</h4>
+<p>這一週每天約花五個小時念這本書，因為我的中文程度只有小學四年級。所以我需要花費大量時間理解 Concept，轉成英文確保自己理解後，再繼續實作。</p>
+
+<p>於是他變成了這樣：</p>
+
+<p><img src="/blog/assets/images/react/2.jpg" alt="readBook" /></p>
+
+<p>接下來的週末兩天，星期五花了 7 小時，星期六花了 5 小時，於是，新版的履歷就生出來囉！</p>
+
+<p>之前我的履歷長這樣
+<img src="/blog/assets/images/react/3.png" alt="origResume" /></p>
+
+<p>現在的履歷，登登！
+<img src="/blog/assets/images/react/4.jpg" alt="newResume" /></p>
+
+<p>RWD 也沒有問題！
+<img src="/blog/assets/images/react/5.png" alt="newResumeRWD" /></p>
+
+<p>使用技術：React.js, React Hooks</p>
+
+<p>欸，對，他上線了，在這裡: <a class="highlighter" href="#">resume</a></p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+                <small>
+                    <span class="post-date"><time
+                            class="post-date"
+                            datetime="2020-11-11"
+                        >November 11, 2020</time></span>
+                    
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a
+                            class="smoothscroll"
+                            href="/blog/categories#new-framework!"
+                        >new framework!</a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            class="smoothscroll"
+                            href="/blog/categories#study-notes"
+                        >study notes</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a
+                            class="smoothscroll"
+                            href="/blog/tags#React"
+                        >#React</a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            class="smoothscroll"
+                            href="/blog/tags#React-Hooks"
+                        >#React Hooks</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between">
+                
+                
+                <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+            </div>
+
+
+        </div>
+
+        <!-- Categories Jumbotron
+================================================== -->
+        <div class="jumbotron fortags">
+            <div class="d-md-flex h-100">
+                <div class="col-md-4 transpdark align-self-center text-center h-100">
+                    <div class="d-md-flex align-items-center justify-content-center h-100">
+                        <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span
+                                class="d-none d-md-inline"
+                            >→</span></h2>
+                    </div>
+                </div>
+                <div class="col-md-8 p-5 align-self-center text-center">
+                    
+                    
+                    
+                    <a
+                        class="mt-1 mb-1"
+                        href="/blog/categories#study-notes"
+                    >study notes (1)</a>
+                    
+                    <a
+                        class="mt-1 mb-1"
+                        href="/blog/categories#new-framework!"
+                    >new framework! (1)</a>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Begin Footer
+================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        Copyright © 2020 Hi, I'm C.
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center text-lg-right">
+                        Made with ❤️ in Taipei, Taiwan. Powered by <a
+                            href="https://jekyllrb.com/"
+                            target="_blank"
+                        >Jekyll</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer
+================================================== -->
+
+    </div> <!-- /.site-content -->
+
+    <!-- Scripts
+================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"
+    ></script>
+
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"
+    ></script>
+
+    <script src="/blog/assets/js/mediumish.js"></script>
+
+    
+
+    <script src="/blog/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+
+</html>
