@@ -2,6 +2,10 @@
 .post-excerpt p {
   display: inline; }
 
+.highlight-text {
+  color: #323643;
+  background-color: #b6edec; }
+
 .highlight {
   background: #fff;
   border: 0;
