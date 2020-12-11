@@ -5,8 +5,8 @@
     <description>一個半路出家前端的學習筆記。</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Dec 2020 18:39:47 +0800</pubDate>
-    <lastBuildDate>Fri, 11 Dec 2020 18:39:47 +0800</lastBuildDate>
+    <pubDate>Fri, 11 Dec 2020 18:56:14 +0800</pubDate>
+    <lastBuildDate>Fri, 11 Dec 2020 18:56:14 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -154,13 +154,13 @@
 
 &lt;p&gt;可是 NativeScript 實在是太冷門了，所以很多東西都沒有 up to date，都得自己創建，但還是有差不多&lt;strong&gt; 1563&lt;/strong&gt; 個插件。&lt;/p&gt;
 
-&lt;p&gt;不過 2016 年被創建後，只有&lt;strong&gt; 16&lt;/strong&gt; 個是被官方認證的插件，而半年內有更新的插件也只有&lt;strong&gt; 71&lt;/strong&gt; 個。&lt;/p&gt;
+&lt;p&gt;不過 2014 年被創建後，只有&lt;strong&gt; 16&lt;/strong&gt; 個是被官方認證的插件，而半年內有更新的插件也只有&lt;strong&gt; 71&lt;/strong&gt; 個。&lt;/p&gt;
 
 &lt;p&gt;嗯哼，你沒看錯，我們來聊聊 NS 的缺點吧。&lt;/p&gt;
 
 &lt;h4 id=&quot;nativescript--hybrid-apps-缺點&quot;&gt;NativeScript &amp;amp; Hybrid Apps 缺點&lt;/h4&gt;
 
-&lt;p&gt;在開始前，我們先來聊聊 Native vs Hybrid Apps。&lt;/p&gt;
+&lt;p&gt;在開始前，我們先說說 Native vs Hybrid Apps。&lt;/p&gt;
 
 &lt;p&gt;我們看這個圖：&lt;/p&gt;
 
@@ -176,11 +176,13 @@
 
 &lt;p&gt;因為 NS、React Native 這些 hybrid apps 相較於 native apps，還是有做不到的 &lt;strong&gt;10-20%&lt;/strong&gt;。拿 React Native 來說，就是那些在 Facebook 的工程師不願意寫出來。（&lt;del&gt;請去追殺這群傢伙&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;另外一點呢，是 hybrid app 的&lt;span class=&quot;highlight-text&quot;&gt;性能&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;我們來說 hybrid app 的&lt;span class=&quot;highlight-text&quot;&gt;性能&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Hybrid Apps 依靠手機的瀏覽器速度 (假設我們用 Ionic 這個框架)，也就表示它基本上不可能像 native apps 那麼快。&lt;/p&gt;
 
-&lt;p&gt;而 NS 在啟動的 loading 時間，基本上就是等待 Windows 95 電腦啟動，app 越大越慢。&lt;/p&gt;
+&lt;p&gt;那這和 NS 有什麼關係？&lt;/p&gt;
+
+&lt;p&gt;因為 NS 也是 hybrid apps，所以它啟動的 loading 時間，基本上就是等待 Windows 95 電腦啟動，功能也是，而且 app 越大越慢。&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;非常小的討論社群&lt;/span&gt;&lt;/p&gt;
 
@@ -194,11 +196,15 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/ns/8.png&quot; alt=&quot;chart&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;這是之前研究框架是搜集出來的結果，不用一個字一個字查，我直接以因為專案需求使用 NS 的主要工程師角色，很負責的用一句話帶過：&lt;span class=&quot;highlight-text&quot;&gt;珍惜生命，遠離 NativeScript。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;這是之前研究框架是搜集出來的結果，不用一個字一個字查。&lt;/p&gt;
 
-&lt;p&gt;好啦，也不能這麼混，我來說說 NS 比起其他兩位還是佔有什麼上風。&lt;/p&gt;
+&lt;p&gt;我直接以因為專案需求使用 NS 的主要工程師角色，很負責的用一句話帶過：&lt;span class=&quot;highlight-text&quot;&gt;珍惜生命，遠離 NativeScript。&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;一直提到的在社團小、開發者也少、開發難度也不低，NativeScript 到底有什麼能贏的過其他兩位的呢？&lt;/p&gt;
+&lt;p&gt;好啦，也不能這麼混，我還是總結一下這個表單：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;社團小、開發者也少、開發難度也不低，很多東西要自己寫&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;那，一直提到的社團小、開發者也少、開發難度也不低，NativeScript 到底有什麼能贏的過其他兩位的呢？&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;第一點 Access to Native API。&lt;/span&gt;&lt;/p&gt;
 

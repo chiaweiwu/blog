@@ -150,14 +150,14 @@ NS 其實有一套類似 XML 的 UI 寫法，拿大家最熟悉的按鈕來說�
 
 可是 NativeScript 實在是太冷門了，所以很多東西都沒有 up to date，都得自己創建，但還是有差不多<strong> 1563</strong> 個插件。
 
-不過 2016 年被創建後，只有<strong> 16</strong> 個是被官方認證的插件，而半年內有更新的插件也只有<strong> 71</strong> 個。
+不過 2014 年被創建後，只有<strong> 16</strong> 個是被官方認證的插件，而半年內有更新的插件也只有<strong> 71</strong> 個。
 
 
 嗯哼，你沒看錯，我們來聊聊 NS 的缺點吧。
 
 #### NativeScript & Hybrid Apps 缺點
 
-在開始前，我們先來聊聊 Native vs Hybrid Apps。
+在開始前，我們先說說 Native vs Hybrid Apps。
 
 我們看這個圖：
 
@@ -176,11 +176,13 @@ NS 其實有一套類似 XML 的 UI 寫法，拿大家最熟悉的按鈕來說�
 因為 NS、React Native 這些 hybrid apps 相較於 native apps，還是有做不到的 <strong>10-20%</strong>。拿 React Native 來說，就是那些在 Facebook 的工程師不願意寫出來。（~~請去追殺這群傢伙~~
 
 
-另外一點呢，是 hybrid app 的<span class="highlight-text">性能</span>
+我們來說 hybrid app 的<span class="highlight-text">性能</span>
 
 Hybrid Apps 依靠手機的瀏覽器速度 (假設我們用 Ionic 這個框架)，也就表示它基本上不可能像 native apps 那麼快。
 
-而 NS 在啟動的 loading 時間，基本上就是等待 Windows 95 電腦啟動，app 越大越慢。
+那這和 NS 有什麼關係？
+
+因為 NS 也是 hybrid apps，所以它啟動的 loading 時間，基本上就是等待 Windows 95 電腦啟動，功能也是，而且 app 越大越慢。
 
 <span class="highlight-text">非常小的討論社群</span>
 
@@ -194,11 +196,15 @@ NS 剛出來時，已經被大多數想寫 mobile 的工程師淘汰（那時 Re
 
 ![chart]({{ site.baseurl }}/assets/images/ns/8.png)
 
-這是之前研究框架是搜集出來的結果，不用一個字一個字查，我直接以因為專案需求使用 NS 的主要工程師角色，很負責的用一句話帶過：<span class="highlight-text">珍惜生命，遠離 NativeScript。</span>
+這是之前研究框架是搜集出來的結果，不用一個字一個字查。
 
-好啦，也不能這麼混，我來說說 NS 比起其他兩位還是佔有什麼上風。
+我直接以因為專案需求使用 NS 的主要工程師角色，很負責的用一句話帶過：<span class="highlight-text">珍惜生命，遠離 NativeScript。</span>
 
-一直提到的在社團小、開發者也少、開發難度也不低，NativeScript 到底有什麼能贏的過其他兩位的呢？
+好啦，也不能這麼混，我還是總結一下這個表單：
+
+<strong>社團小、開發者也少、開發難度也不低，很多東西要自己寫</strong>
+
+那，一直提到的社團小、開發者也少、開發難度也不低，NativeScript 到底有什麼能贏的過其他兩位的呢？
 
 <span class="highlight-text">第一點 Access to Native API。</span>
 
