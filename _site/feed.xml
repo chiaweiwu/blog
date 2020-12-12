@@ -5,8 +5,8 @@
     <description>一個半路出家前端的學習筆記。</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Dec 2020 18:56:14 +0800</pubDate>
-    <lastBuildDate>Fri, 11 Dec 2020 18:56:14 +0800</lastBuildDate>
+    <pubDate>Sat, 12 Dec 2020 20:53:56 +0800</pubDate>
+    <lastBuildDate>Sat, 12 Dec 2020 20:53:56 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -25,13 +25,13 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/ns/1.png&quot; alt=&quot;frameworks&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;是的，華生&lt;/strong&gt;，在前端框架年年出、年年更新的盛況下，現在前端寫的已經不是靜態網站了，我們基本上都在寫 web app ，配合可愛的後端隊友，一個個網頁版的 start up 服務就這樣被孵化出來了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;是的，華生&lt;/strong&gt;，在前端框架年年出、年年更新的盛況下，現在前端寫的已經不是靜態網站了，我們基本上都在寫 web app ，配合可愛的後端隊友，一個個網頁版的 start up 服務就這樣被孵化出來。&lt;/p&gt;
 
-&lt;p&gt;那網頁版的都出來了，為什麼不寫&lt;strong&gt;手機&lt;/strong&gt;呢？&lt;/p&gt;
+&lt;p&gt;那網頁版的都出來了，為什麼不寫&lt;strong&gt;手機 app &lt;/strong&gt;呢？&lt;/p&gt;
 
 &lt;p&gt;&lt;del&gt;呃，因為我是前端我不會（喂&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;因為寫手機 app 真的是個學問，每個平台都有自己的寫法、規範和，除此之外還得學習不同的語言才寫的出來，寫的出來還只是基礎，還要畫面好看、功能好用、效能夠快。&lt;/p&gt;
+&lt;p&gt;因為寫手機 app 真的是個學問，每個平台都有自己的寫法、規範，除此之外還得學習不同的語言才寫的出來，寫的出來還只是基礎，還要畫面好看、功能好用、效能夠快。&lt;/p&gt;
 
 &lt;p&gt;喔，對了，還要 UI/UX 好用哦，啾咪。&lt;/p&gt;
 
@@ -39,13 +39,13 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/ns/2.jpg&quot; alt=&quot;phone&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt;，沒錯，就是這個 BUT 他出現了，我是前端就不能寫手機嘛？ 我也想寫啊，可是（以下省略幾十行理由）我無法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt;，沒錯，就是這個 BUT 他出現了，我是前端就不能寫手機 app 嘛？ 我也想寫啊，可是因為（以下省略幾十行理由）我無法。&lt;/p&gt;
 
 &lt;p&gt;沒關係，這時候我們的心聲被聽到了（耶~&lt;/p&gt;
 
-&lt;p&gt;我們現在有種神奇的科技，主張只要寫一次 code 就可以產出雙平台 app，那就是 hybrid apps！&lt;/p&gt;
+&lt;p&gt;我們現在有種神奇的科技，主張只要寫一次 code 就可以產出雙平台 apps，那就是 hybrid apps！&lt;/p&gt;
 
-&lt;p&gt;關於 hybrid apps ，我們之後會細說，我們先來聊聊今天的主角: &lt;span class=&quot;highlight-text&quot;&gt;NativeScript!&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;關於 hybrid apps ，我們之後會細說，我們先來聊聊今天的主角（也是 hybrid apps 之一的）: &lt;span class=&quot;highlight-text&quot;&gt;NativeScript!&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/ns/3.png&quot; alt=&quot;ns&quot; /&gt;&lt;/p&gt;
 
@@ -57,7 +57,7 @@
 
 &lt;p&gt;簡單來說，它就是個可以寫原生 &lt;strong&gt;iOS&lt;/strong&gt; 跟 &lt;strong&gt;Android app&lt;/strong&gt; 的 &lt;strong&gt;JavaScript Framework&lt;/strong&gt;。&lt;/p&gt;
 
-&lt;p&gt;它不僅是 Open Source，也有著偉大的理想，就是讓工程師可以寫一次，就哪裡都可以用的框架（當然這是夢想，跟實際還是有很大的差別，不過夠接近了啦~）&lt;/p&gt;
+&lt;p&gt;它不僅是 Open Source，也有著偉大的理想，就是讓工程師可以寫一次，就哪裡（ iOS + Android ）都可以用的框架（當然這是夢想，跟實際還是有很大的差別，不過夠接近了啦~）&lt;/p&gt;
 
 &lt;p&gt;那我們需要會什麼語言才能寫它咧？&lt;/p&gt;
 
@@ -76,9 +76,9 @@
 
 &lt;p&gt;然後，重頭戲來了！&lt;/p&gt;
 
-&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;NS 最大特點就是可以存取原生（Truly Native） iOS 跟 Android 的 classes！&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;NS 最大特點就是可以存取原生（Native） iOS 跟 Android 的 classes！&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;可是為什麼他可以寫原生 app，他不是用 JavaScript嗎？而 Truly Native 又是什麼鬼？&lt;/p&gt;
+&lt;p&gt;可是為什麼他可以寫原生 app，他不是用 JavaScript嗎？而 Native 又是什麼鬼？&lt;/p&gt;
 
 &lt;p&gt;這個跟 NS 的結構有關，我們往下看。&lt;/p&gt;
 
@@ -140,9 +140,9 @@
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&amp;lt;Button (tap)=&quot;onTap()&quot; class=&quot;btn-primary&quot; /&amp;gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;再配合 CSS、 ScSS 的結合，就可以把 UI 繪製出來了！&lt;/p&gt;
+&lt;p&gt;再配合 CSS、 ScSS 的結合，就可以把 UI 繪製出來！&lt;/p&gt;
 
-&lt;p&gt;可是，我們總不可能整個 app 都要自己寫吧？ 對，這個時候我們就要開始來聊聊 NS 的缺點，跟如何找資源了（抱大神大腿了&lt;/p&gt;
+&lt;p&gt;可是，我們總不可能整個 app 都要自己寫吧？ 對，這個時候我們就要開始來聊聊 NS 的缺點，跟如何找資源了（抱大神大腿&lt;/p&gt;
 
 &lt;h4 id=&quot;nativescript-插件-主要結構之一&quot;&gt;NativeScript 插件 （主要結構之一）&lt;/h4&gt;
 
@@ -174,9 +174,9 @@
 
 &lt;p&gt;&lt;strong&gt;為什麼? &lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;因為 NS、React Native 這些 hybrid apps 相較於 native apps，還是有做不到的 &lt;strong&gt;10-20%&lt;/strong&gt;。拿 React Native 來說，就是那些在 Facebook 的工程師不願意寫出來。（&lt;del&gt;請去追殺這群傢伙&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;因為 NS、React Native 這些 hybrid apps 相較於 native apps，還是有做不到的 &lt;strong&gt;10-20%&lt;/strong&gt;。拿 React Native 來說，就是那些在 Facebook 的工程師不願意寫出來的那些複雜功能。（&lt;del&gt;請去追殺這群傢伙&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;我們來說 hybrid app 的&lt;span class=&quot;highlight-text&quot;&gt;性能&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;接著，我們來說 hybrid app 的&lt;span class=&quot;highlight-text&quot;&gt;性能&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Hybrid Apps 依靠手機的瀏覽器速度 (假設我們用 Ionic 這個框架)，也就表示它基本上不可能像 native apps 那麼快。&lt;/p&gt;
 
@@ -233,7 +233,7 @@
 &lt;p&gt;&lt;img src=&quot;/assets/images/ns/9.png&quot; alt=&quot;shiba&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;其實，我還想私心跟大家 demo 一下 NS 的功能，可是礙於公司產品不可以 showcase，我之後再奉上一小段 demo 吧， 請敬請期待。&lt;/p&gt;
+  &lt;p&gt;其實，我還想私心跟大家 demo 一下 NS 的功能，可是礙於公司產品不可以 showcase，我之後再奉上一小段其他 side project app 的迷你 demo 吧， 請敬請期待。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;謝謝各位的閱讀。&lt;/p&gt;

@@ -24,13 +24,13 @@ hidden: false
 
 ![frameworks]({{ site.baseurl }}/assets/images/ns/1.png)
 
-<strong>是的，華生</strong>，在前端框架年年出、年年更新的盛況下，現在前端寫的已經不是靜態網站了，我們基本上都在寫 web app ，配合可愛的後端隊友，一個個網頁版的 start up 服務就這樣被孵化出來了。
+<strong>是的，華生</strong>，在前端框架年年出、年年更新的盛況下，現在前端寫的已經不是靜態網站了，我們基本上都在寫 web app ，配合可愛的後端隊友，一個個網頁版的 start up 服務就這樣被孵化出來。
 
-那網頁版的都出來了，為什麼不寫<strong>手機</strong>呢？
+那網頁版的都出來了，為什麼不寫<strong>手機 app </strong>呢？
 
 ~~呃，因為我是前端我不會（喂~~
 
-因為寫手機 app 真的是個學問，每個平台都有自己的寫法、規範和，除此之外還得學習不同的語言才寫的出來，寫的出來還只是基礎，還要畫面好看、功能好用、效能夠快。
+因為寫手機 app 真的是個學問，每個平台都有自己的寫法、規範，除此之外還得學習不同的語言才寫的出來，寫的出來還只是基礎，還要畫面好看、功能好用、效能夠快。
 
 喔，對了，還要 UI/UX 好用哦，啾咪。
 
@@ -38,13 +38,13 @@ hidden: false
 
 ![phone]({{ site.baseurl }}/assets/images/ns/2.jpg)
 
-<strong>BUT</strong>，沒錯，就是這個 BUT 他出現了，我是前端就不能寫手機嘛？ 我也想寫啊，可是（以下省略幾十行理由）我無法。
+<strong>BUT</strong>，沒錯，就是這個 BUT 他出現了，我是前端就不能寫手機 app 嘛？ 我也想寫啊，可是因為（以下省略幾十行理由）我無法。
 
 沒關係，這時候我們的心聲被聽到了（耶~
 
-我們現在有種神奇的科技，主張只要寫一次 code 就可以產出雙平台 app，那就是 hybrid apps！
+我們現在有種神奇的科技，主張只要寫一次 code 就可以產出雙平台 apps，那就是 hybrid apps！
 
-關於 hybrid apps ，我們之後會細說，我們先來聊聊今天的主角: <span class="highlight-text">NativeScript!</span>
+關於 hybrid apps ，我們之後會細說，我們先來聊聊今天的主角（也是 hybrid apps 之一的）: <span class="highlight-text">NativeScript!</span>
 
 ![ns]({{ site.baseurl }}/assets/images/ns/3.png)
 
@@ -56,7 +56,7 @@ hidden: false
 
 簡單來說，它就是個可以寫原生 <strong>iOS</strong> 跟 <strong>Android app</strong> 的 <strong>JavaScript Framework</strong>。
 
-它不僅是 Open Source，也有著偉大的理想，就是讓工程師可以寫一次，就哪裡都可以用的框架（當然這是夢想，跟實際還是有很大的差別，不過夠接近了啦~）
+它不僅是 Open Source，也有著偉大的理想，就是讓工程師可以寫一次，就哪裡（ iOS + Android ）都可以用的框架（當然這是夢想，跟實際還是有很大的差別，不過夠接近了啦~）
 
 那我們需要會什麼語言才能寫它咧？
 
@@ -71,9 +71,9 @@ NS 的好處是它有多種寫法可以選擇，前端三大框架霸主都可�
 
 然後，重頭戲來了！
 
-<span class="highlight-text">NS 最大特點就是可以存取原生（Truly Native） iOS 跟 Android 的 classes！</span>
+<span class="highlight-text">NS 最大特點就是可以存取原生（Native） iOS 跟 Android 的 classes！</span>
 
-可是為什麼他可以寫原生 app，他不是用 JavaScript嗎？而 Truly Native 又是什麼鬼？
+可是為什麼他可以寫原生 app，他不是用 JavaScript嗎？而 Native 又是什麼鬼？
 
 這個跟 NS 的結構有關，我們往下看。 
 
@@ -136,9 +136,9 @@ NS 其實有一套類似 XML 的 UI 寫法，拿大家最熟悉的按鈕來說�
 <Button (tap)="onTap()" class="btn-primary" />
 ```
 
-再配合 CSS、 ScSS 的結合，就可以把 UI 繪製出來了！
+再配合 CSS、 ScSS 的結合，就可以把 UI 繪製出來！
 
-可是，我們總不可能整個 app 都要自己寫吧？ 對，這個時候我們就要開始來聊聊 NS 的缺點，跟如何找資源了（抱大神大腿了
+可是，我們總不可能整個 app 都要自己寫吧？ 對，這個時候我們就要開始來聊聊 NS 的缺點，跟如何找資源了（抱大神大腿
 
 #### NativeScript 插件 （主要結構之一）
 
@@ -173,10 +173,10 @@ NS 其實有一套類似 XML 的 UI 寫法，拿大家最熟悉的按鈕來說�
 
 <strong>為什麼? </strong>
 
-因為 NS、React Native 這些 hybrid apps 相較於 native apps，還是有做不到的 <strong>10-20%</strong>。拿 React Native 來說，就是那些在 Facebook 的工程師不願意寫出來。（~~請去追殺這群傢伙~~
+因為 NS、React Native 這些 hybrid apps 相較於 native apps，還是有做不到的 <strong>10-20%</strong>。拿 React Native 來說，就是那些在 Facebook 的工程師不願意寫出來的那些複雜功能。（~~請去追殺這群傢伙~~
 
 
-我們來說 hybrid app 的<span class="highlight-text">性能</span>
+接著，我們來說 hybrid app 的<span class="highlight-text">性能</span>
 
 Hybrid Apps 依靠手機的瀏覽器速度 (假設我們用 Ionic 這個框架)，也就表示它基本上不可能像 native apps 那麼快。
 
@@ -235,7 +235,7 @@ Native Script 的缺點那麼多，為什麼我還會從零學起，並用 Nativ
 ![shiba]({{ site.baseurl }}/assets/images/ns/9.png)
 
 
-> 其實，我還想私心跟大家 demo 一下 NS 的功能，可是礙於公司產品不可以 showcase，我之後再奉上一小段 demo 吧， 請敬請期待。
+> 其實，我還想私心跟大家 demo 一下 NS 的功能，可是礙於公司產品不可以 showcase，我之後再奉上一小段其他 side project app 的迷你 demo 吧， 請敬請期待。
 
 
 謝謝各位的閱讀。
