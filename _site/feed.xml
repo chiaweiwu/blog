@@ -2,12 +2,252 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C's Notes</title>
-    <description>一個半路出家前端的學習筆記。</description>
+    <description>一個追求使用者體驗前端工程師的學習筆記。</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Dec 2020 20:53:56 +0800</pubDate>
-    <lastBuildDate>Sat, 12 Dec 2020 20:53:56 +0800</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2020 23:03:16 +0800</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2020 23:03:16 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>ES6</title>
+        <description>&lt;h2 id=&quot;es6-for-react&quot;&gt;ES6 for React&lt;/h2&gt;
+
+&lt;p&gt;JavaScript = a “dialect” of ECMAScript&lt;/p&gt;
+
+&lt;p&gt;ES6 = ECMAScript 2015 = JavaScript standard.&lt;/p&gt;
+
+&lt;p&gt;React uses ES6. ES6 is also getting popularity for writing server applications and services via Node.js.&lt;/p&gt;
+
+&lt;h4 id=&quot;variables&quot;&gt;Variables&lt;/h4&gt;
+
+&lt;p&gt;In ES6, variables are declared using &lt;span class=&quot;highlight-text&quot;&gt;const, let and var&lt;/span&gt; keywords.&lt;/p&gt;
+
+&lt;p&gt;We cannot redeclare &lt;strong&gt;const&lt;/strong&gt; or &lt;strong&gt;let&lt;/strong&gt; variables.&lt;/p&gt;
+
+&lt;p&gt;And, we can only update &lt;strong&gt;let&lt;/strong&gt; variable.&lt;/p&gt;
+
+&lt;h4 id=&quot;block-scope-vs-function-scope&quot;&gt;Block Scope vs Function Scope&lt;/h4&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;var&lt;/span&gt; is global scope. It can be accessed everywhere.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;let&lt;/span&gt; is a block scope. It can only be accessed inside the block where it is defined.&lt;/p&gt;
+
+&lt;h4 id=&quot;new-update-arrow-function--regular-function&quot;&gt;New Update: Arrow Function &amp;amp; Regular Function&lt;/h4&gt;
+
+&lt;p&gt;Regular Function&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;var hello = function(name) { 
+  return name
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ES6 Arrow function&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let hello = (name) =&amp;gt; { return name }
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Even more ways to define arrow functions…&lt;/p&gt;
+
+&lt;p&gt;We can omit {}, if there’s only one expression&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let hello = (num1, num2) =&amp;gt; num1 + num2;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can omit (), if there’s only one argument&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let hello = name =&amp;gt; name;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can use _, if there’s no argument&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let hello = _ =&amp;gt; 1 + 2;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;this-keyword&quot;&gt;this keyword&lt;/h4&gt;
+
+&lt;p&gt;In regular function, the &lt;strong&gt;this&lt;/strong&gt; keyword represents the object called inside a function.&lt;/p&gt;
+
+&lt;p&gt;In arrow function, the &lt;strong&gt;this&lt;/strong&gt; keyword represents the object that defined the function, which is the window. object.&lt;/p&gt;
+
+&lt;h4 id=&quot;template-literals&quot;&gt;Template Literals&lt;/h4&gt;
+
+&lt;p&gt;Quoted between ``, string literals that can include expressions. Like this…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let name = 'Boop';
+let greeting = `Hello, ${name}`;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;destructuring-arrays&quot;&gt;Destructuring: Arrays&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let array = [1,2,3,4,5];
+let [value1,value2,value3] = array;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;this is equivalent to&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let array = [1,2,3,4,5];
+let value1 = array[0];
+let value2 = array[1];
+let value3 = array[2];
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;destructuring-objects&quot;&gt;Destructuring: Objects&lt;/h4&gt;
+
+&lt;p&gt;Similar to destructuring array…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let obj = {
+  key1: 'boop',
+  key2: 'foo',
+  key3: 'bar'
+};
+let [key1,key2,key3] = obj;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;spread-operator&quot;&gt;Spread Operator&lt;/h4&gt;
+
+&lt;p&gt;The spread operator spreads the values in an iterable, such as array &amp;amp; strings, across arguments or elements.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let fruits = ['apples','bananas','strawberry'];
+let veggies = ['cabbage','asparagus','green onions'];
+
+let grocery = [...fruits,...veggies];
+console.log(grocery);
+// ['apples','bananas','strawberry','cabbage','asparagus','green onions']
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Spread operator can also be used to clone an array &amp;amp; objects in an arrow function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;const dog1 = {
+  name: 'Boop',
+  breed: 'Corgi'
+}
+
+const dog2 = {...dog1}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;rest-parameter&quot;&gt;Rest Parameter&lt;/h4&gt;
+
+&lt;p&gt;This is used to pass an arbitrary number of argument, and to process these args within the arrow function.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Rest parameters are array instances.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We use rest parameters if we need extra parameters other than the specified ones.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let foo = function(a, b, ...args) {
+  console.log(args);
+}
+
+foo(1,2); // [], nothing will print inside the array, because we don't have extra parameters
+
+foo(1,2,3,4,5) // [3,4,5]
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Difference between rest parameter and normal arguments&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Rest parameters returns an &lt;span class=&quot;highlight-text&quot;&gt;array&lt;/span&gt; by default, so methods like &lt;strong&gt;map, sort, shift, forEach…&lt;/strong&gt; can be used directly. But for normal args, they need to be converted into an array because normal args are &lt;span class=&quot;highlight-text&quot;&gt;objects&lt;/span&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/react-02/</link>
+        <guid isPermaLink="true">http://localhost:4000/react-02/</guid>
+        
+        <category>React</category>
+        
+        <category>JS Fundamentals</category>
+        
+        
+        <category>React</category>
+        
+        <category>Fundamentals</category>
+        
+        <category>front-end my love</category>
+        
+        <category>study notes</category>
+        
+        <category>new framework!</category>
+        
+      </item>
+    
+      <item>
+        <title>Intro to React</title>
+        <description>&lt;h2 id=&quot;intro-to-react&quot;&gt;Intro to React&lt;/h2&gt;
+
+&lt;p&gt;React = JS library for building user interfaces or UI components.&lt;/p&gt;
+
+&lt;h4 id=&quot;features&quot;&gt;Features&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;JSX - JavaScript Syntax Extension&lt;/li&gt;
+  &lt;li&gt;Virtual DOM&lt;/li&gt;
+  &lt;li&gt;One way data binding&lt;/li&gt;
+  &lt;li&gt;Extensions&lt;/li&gt;
+  &lt;li&gt;Debugging&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;advantages--limitations&quot;&gt;Advantages &amp;amp; Limitations&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Virtual DOM&lt;/strong&gt;: React uses virtual DOM which is a JS object. This will improve apps performance, since JS virtual DOM is faster than regular DOM. 
+&lt;strong&gt;Usability&lt;/strong&gt;:React can be used on client and server sides as well as with other frameworks (i.e. NativeScript).
+&lt;strong&gt;Maintenance&lt;/strong&gt;:Component and data patterns improve readability, which helps to maintain larger apps.&lt;/p&gt;
+
+&lt;p&gt;But React covers only the view part of the app. So to complete the entire development we would have to choose other technologies.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/react-01/</link>
+        <guid isPermaLink="true">http://localhost:4000/react-01/</guid>
+        
+        <category>React</category>
+        
+        <category>JS Fundamentals</category>
+        
+        
+        <category>React</category>
+        
+        <category>Fundamentals</category>
+        
+        <category>front-end my love</category>
+        
+        <category>study notes</category>
+        
+        <category>new framework!</category>
+        
+      </item>
     
       <item>
         <title>前端也可以寫手機 app ? 神奇的框架: NativeScript</title>
@@ -264,6 +504,8 @@ https://www.itread01.com/content/1544417462.html
         <category>Mobile App Development</category>
         
         
+        <category>Angular</category>
+        
         <category>front-end my love</category>
         
         <category>study notes</category>
@@ -320,6 +562,8 @@ https://www.itread01.com/content/1544417462.html
         
         <category>React Hooks</category>
         
+        
+        <category>React</category>
         
         <category>front-end my love</category>
         

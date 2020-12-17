@@ -2,7 +2,7 @@
 layout: post
 title:  "前端也可以寫手機 app ? 神奇的框架: NativeScript"
 author: cwu
-categories: [ front-end my love, study notes, new framework!, mobile development ]
+categories: [ Angular, front-end my love, study notes, new framework!, mobile development ]
 tags: [Angular 9, NativeScript, Mobile App Development ]
 image: assets/images/ns/0.jpg
 description: "準備中"
