@@ -2,7 +2,7 @@
 layout: post
 title:  "今年黑五不購物，讀書去~"
 author: cwu
-categories: [ React, front-end my love, study notes, new framework! ]
+categories: [ React, front-end my love, new framework! ]
 tags: [React, React Hooks]
 image: assets/images/react/0.jpg
 description: "那個去年黑五在打LoL、吃牛排的 Angular 工程師，今年怎麼開始學 React.js 啦？"

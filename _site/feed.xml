@@ -5,13 +5,305 @@
     <description>一個追求使用者體驗前端工程師的學習筆記。</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Dec 2020 23:07:00 +0800</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2020 23:07:00 +0800</lastBuildDate>
+    <pubDate>Fri, 18 Dec 2020 17:20:25 +0800</pubDate>
+    <lastBuildDate>Fri, 18 Dec 2020 17:20:25 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
+        <title>Functional Components vs Class Components</title>
+        <description>&lt;p&gt;短篇 React 學習筆記。&lt;/p&gt;
+
+&lt;h2 id=&quot;about-components&quot;&gt;About Components&lt;/h2&gt;
+
+&lt;p&gt;Core building blocks of React.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Multiple individual components forms a parent component.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;2 types of components in React:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Functional&lt;/li&gt;
+  &lt;li&gt;Class&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Before React Hooks were introduced, functional components were generally used for style (aka the dumb/stateless/presentational component) and class components were used for logic (smart component/stateful/container components). This practice has since been deprecated.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;functional-components&quot;&gt;Functional Components&lt;/h2&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;After React Hooks are introduced, functional components are used to store state using react hooks.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Like the name implies, think of functional component as a function.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;function Welcome(props) {
+return &amp;lt;h1&amp;gt;Hello, {props.name} &amp;lt;/h1&amp;gt;;
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;const element = &amp;lt;Welcome name=&quot;Boop&quot; /&amp;gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/study-series/fn.jpg&quot; alt=&quot;functionalComp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Props should never be modified!&lt;/span&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;when-should-you-use-functional-components&quot;&gt;When should you use functional components?&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;For React &amp;lt; 16.8…&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;When your comp. simply receive props, doesn’t have a state and renders smth (dumb/stateless/presentational comp.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;For React &amp;gt; 16.8… (React Hooks were introduced)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Func. comp. can now have its own state via React Hooks&lt;/li&gt;
+  &lt;li&gt;Preferred over class comp. bc of React Hooks now.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;class-components&quot;&gt;Class Components&lt;/h2&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Class components were preferred before React Hooks were introduced.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Basically ES6 classes.&lt;/p&gt;
+
+&lt;p&gt;Similar to functional component, class comp. optionally receives props as input and renders JSX.&lt;/p&gt;
+
+&lt;p&gt;Class comp. can also maintain private internal state of a particular comp.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;class Welcome extends React.Component {
+  render(){
+    return &amp;lt;h1&amp;gt;Hello, {this.props.name} &amp;lt;/h1&amp;gt;;
+  }
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Comp. should always start with capital letter.&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&quot;highlight-text&quot;&gt;Again, props should never be modified!&lt;/span&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;drawbacks&quot;&gt;Drawbacks&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Class comp. is slower than fun. comp in terms of performance. This difference increases as the number of comp in the app increases.&lt;/li&gt;
+  &lt;li&gt;Slightly inefficient to use bc it requires more coding.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 18 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/react-05/</link>
+        <guid isPermaLink="true">http://localhost:4000/react-05/</guid>
+        
+        <category>React</category>
+        
+        <category>JS Fundamentals</category>
+        
+        
+        <category>React</category>
+        
+        <category>Fundamentals</category>
+        
+        <category>front-end my love</category>
+        
+        <category>study notes</category>
+        
+        <category>new framework!</category>
+        
+      </item>
+    
+      <item>
+        <title>Virtual DOM &amp; DOM Manipulation</title>
+        <description>&lt;p&gt;短篇 React 學習筆記。&lt;/p&gt;
+
+&lt;h2 id=&quot;virtual-dom&quot;&gt;Virtual DOM&lt;/h2&gt;
+
+&lt;p&gt;React creates a tree of custom objects, each representing a part of the DOM.&lt;/p&gt;
+
+&lt;p&gt;If we create a &lt;span class=&quot;highlight-text&quot;&gt;p&lt;/span&gt; element inside a &lt;span class=&quot;highlight-text&quot;&gt;div&lt;/span&gt;, React will create React.div object and React.p object.&lt;/p&gt;
+
+&lt;p&gt;React will then modify these objects quickly when needed &lt;span class=&quot;highlight-text&quot;&gt;(modifying only what’s required)&lt;/span&gt; rather than changing the real DOM.&lt;/p&gt;
+
+&lt;p&gt;Before it renders the component, React will determine what needs to be changed using the virtual DOM. Then React will get virtual DOM and real DOM in sync.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Virtual DOM = blueprint&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Virtual DOM contains the required details needed to construct the DOM. But it doesn’t require all the heavy parts of the real DOM. Thus, making virtual DOM creation much faster than actual DOM.&lt;/p&gt;
+
+&lt;h2 id=&quot;dom-manipulation&quot;&gt;DOM Manipulation&lt;/h2&gt;
+
+&lt;p&gt;DOM Manipulation = dynamically changing the content of web page.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Reconciliation&lt;/span&gt; = changes made to the virtual DOM and then sync to the real DOM.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;Diffing&lt;/span&gt; = process when React figures out which objects has been changed&lt;/p&gt;
+
+&lt;h4 id=&quot;process&quot;&gt;Process&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;React updates virtual DOM&lt;/li&gt;
+  &lt;li&gt;States of virtual DOM will be compared (previous + updated), to identify what has been changed. This is done via &lt;span class=&quot;highlight-text&quot;&gt;Diffing Algorithm&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Changed objects will get updated to the real DOM&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;example-of-diffing-algorithm&quot;&gt;Example of Diffing Algorithm&lt;/h4&gt;
+
+&lt;p&gt;When &lt;strong&gt;root&lt;/strong&gt; is changed, React will delete the tree and rebuild the entire tree.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;// old
+&amp;lt;div&amp;gt;&amp;lt;App /&amp;gt;&amp;lt;/div&amp;gt;
+
+// new
+&amp;lt;span&amp;gt;&amp;lt;App /&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When &lt;strong&gt;attribute&lt;/strong&gt; is changed, React will only change the attribute.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;// old
+&amp;lt;div id=&quot;root&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+// new
+&amp;lt;div id=&quot;boop&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When &lt;strong&gt;new child element&lt;/strong&gt; is added at the end of a list, React will simply add it to the list.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;// old
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;hi&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;hi1&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+// new
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;hi&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;hi1&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;hi2&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 18 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/react-04/</link>
+        <guid isPermaLink="true">http://localhost:4000/react-04/</guid>
+        
+        <category>React</category>
+        
+        <category>JS Fundamentals</category>
+        
+        
+        <category>React</category>
+        
+        <category>Fundamentals</category>
+        
+        <category>front-end my love</category>
+        
+        <category>study notes</category>
+        
+        <category>new framework!</category>
+        
+      </item>
+    
+      <item>
+        <title>JSX</title>
+        <description>&lt;p&gt;短篇 React 學習筆記。&lt;/p&gt;
+
+&lt;h2 id=&quot;jsx&quot;&gt;JSX&lt;/h2&gt;
+
+&lt;p&gt;JSX = JavaScript Syntax Extension&lt;/p&gt;
+
+&lt;p&gt;Lets XML/HTML + JavaScript/React code coexist.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;const name = 'Boop';
+const element = '&amp;lt;div&amp;gt;Hello, {name}&amp;lt;/div&amp;gt;';
+
+
+ReactDOM.render(element, document.getElementById('root'));
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example, the variable &lt;strong&gt;name&lt;/strong&gt; is wrapped in JSX.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;These code are then converted into standard JavaScript objects that can be parsed by the JS Engine.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;why-jsx&quot;&gt;Why JSX?&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Much faster than normal JS, as JSX optimizes when it’s converted into regular JS.&lt;/li&gt;
+  &lt;li&gt;Easy to create template.&lt;/li&gt;
+  &lt;li&gt;React Component lets us keep both markup and logic together in one file using JSX.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;attributes-in-jsx&quot;&gt;Attributes in JSX&lt;/h4&gt;
+
+&lt;p&gt;React DOM uses camelCase.&lt;/p&gt;
+
+&lt;p&gt;For example, class becomes className…&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;let button = &amp;lt;button className=&quot;btn-primary&quot;&amp;gt;Button&amp;lt;/button&amp;gt;;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 18 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/react-03/</link>
+        <guid isPermaLink="true">http://localhost:4000/react-03/</guid>
+        
+        <category>React</category>
+        
+        <category>JS Fundamentals</category>
+        
+        
+        <category>React</category>
+        
+        <category>Fundamentals</category>
+        
+        <category>front-end my love</category>
+        
+        <category>study notes</category>
+        
+        <category>new framework!</category>
+        
+      </item>
+    
+      <item>
         <title>ES6</title>
-        <description>&lt;h2 id=&quot;es6-for-react&quot;&gt;ES6 for React&lt;/h2&gt;
+        <description>&lt;p&gt;短篇 React 學習筆記。&lt;/p&gt;
+
+&lt;h2 id=&quot;es6-for-react&quot;&gt;ES6 for React&lt;/h2&gt;
 
 &lt;p&gt;JavaScript = a “dialect” of ECMAScript&lt;/p&gt;
 
@@ -25,13 +317,13 @@
 
 &lt;p&gt;We cannot redeclare &lt;strong&gt;const&lt;/strong&gt; or &lt;strong&gt;let&lt;/strong&gt; variables.&lt;/p&gt;
 
-&lt;p&gt;And, we can only update &lt;strong&gt;let&lt;/strong&gt; variable.&lt;/p&gt;
+&lt;p&gt;And, we can only reassign &lt;strong&gt;let&lt;/strong&gt; variable.&lt;/p&gt;
 
 &lt;h4 id=&quot;block-scope-vs-function-scope&quot;&gt;Block Scope vs Function Scope&lt;/h4&gt;
 
-&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;var&lt;/span&gt; is global scope. It can be accessed everywhere.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;var&lt;/span&gt; is function scoped. It can be accessed everywhere.&lt;/p&gt;
 
-&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;let&lt;/span&gt; is a block scope. It can only be accessed inside the block where it is defined.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;let&lt;/span&gt; is a block scoped. It can only be accessed inside the block where it is defined.&lt;/p&gt;
 
 &lt;h4 id=&quot;new-update-arrow-function--regular-function&quot;&gt;New Update: Arrow Function &amp;amp; Regular Function&lt;/h4&gt;
 
@@ -206,7 +498,9 @@ foo(1,2,3,4,5) // [3,4,5]
     
       <item>
         <title>Intro to React</title>
-        <description>&lt;h2 id=&quot;intro-to-react&quot;&gt;Intro to React&lt;/h2&gt;
+        <description>&lt;p&gt;短篇 React 學習筆記。&lt;/p&gt;
+
+&lt;h2 id=&quot;intro-to-react&quot;&gt;Intro to React&lt;/h2&gt;
 
 &lt;p&gt;React = JS library for building user interfaces or UI components.&lt;/p&gt;
 
@@ -508,8 +802,6 @@ https://www.itread01.com/content/1544417462.html
         
         <category>front-end my love</category>
         
-        <category>study notes</category>
-        
         <category>new framework!</category>
         
         <category>mobile development</category>
@@ -566,8 +858,6 @@ https://www.itread01.com/content/1544417462.html
         <category>React</category>
         
         <category>front-end my love</category>
-        
-        <category>study notes</category>
         
         <category>new framework!</category>
         
