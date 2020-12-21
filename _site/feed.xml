@@ -5,9 +5,149 @@
     <description>一個追求使用者體驗前端工程師的學習筆記。</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Dec 2020 00:40:44 +0800</pubDate>
-    <lastBuildDate>Mon, 21 Dec 2020 00:40:44 +0800</lastBuildDate>
+    <pubDate>Mon, 21 Dec 2020 23:59:47 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Dec 2020 23:59:47 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Build Custom Hooks</title>
+        <description>&lt;p&gt;短篇 React 學習筆記。&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-react-hooks&quot;&gt;What is React Hooks?&lt;/h2&gt;
+
+&lt;p&gt;They are functions that let us hooks into &lt;span class=&quot;highlight-text&quot;&gt;React state and lifecycle features&lt;/span&gt; from function components.&lt;/p&gt;
+
+&lt;p&gt;Hooks reduces the complexity of state management. Redux is great for state management, but there are many steps in the process. Rather, hooks can be seen as a singular step. (More on this in a later post~)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why build our own custom hooks?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Building our own hooks lets us extract component logic into reusable functions.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, when we want to share logic between 2 JavaScript functions, we extract it to a third function.&lt;/p&gt;
+
+&lt;p&gt;Since hooks and components are JS function, we can extract them as well.&lt;/p&gt;
+
+&lt;h4 id=&quot;building-custom-hooks&quot;&gt;Building Custom Hooks&lt;/h4&gt;
+
+&lt;p&gt;&lt;span class=&quot;highlight-text&quot;&gt;A custom Hook is a JavaScript function whose name starts with “use” and that may call other Hooks.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Say we want to to see if our friends are online. But we also want to build a contact list that shows us who is online.&lt;/p&gt;
+
+&lt;p&gt;So we can extract hook logic, and apply the hook into where the application needs the “friend status” logic.&lt;/p&gt;
+
+&lt;p&gt;Here’s our custom hook that shows if a friend is online:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;import { useState, useEffect } from 'react';
+
+function useFriendStatus(friendID) {
+  const [isOnline, setIsOnline] = useState(null);
+
+  useEffect(() =&amp;gt; {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+
+    ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
+    return () =&amp;gt; {
+      ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange);
+    };
+  });
+
+  return isOnline;
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, say we want both &lt;span class=&quot;highlight-text&quot;&gt;Friend Status&lt;/span&gt; and &lt;span class=&quot;highlight-text&quot;&gt;Contact List&lt;/span&gt; to have the “friend status” logic.&lt;/p&gt;
+
+&lt;p&gt;That would be…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;function FriendStatus(props) {
+  const isOnline = useFriendStatus(props.friend.id);
+
+  if (isOnline === null) {
+    return 'Loading...';
+  }
+  return isOnline ? 'Online' : 'Offline';
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and contact list…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;function ContactListItem(props) {
+  const isOnline = useFriendStatus(props.friend.id);
+
+  return (
+    &amp;lt;li style=&amp;gt;
+      {props.friend.name}
+    &amp;lt;/li&amp;gt;
+  );
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Keep in Mind…&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We must use the prefix “use” in front of our hooks, so it doesn’t get confusing.&lt;/li&gt;
+  &lt;li&gt;The states grabbed by hooks are &lt;span class=&quot;highlight-text&quot;&gt;completely isolated&lt;/span&gt; from one another. This means they don’t share the same state.&lt;/li&gt;
+  &lt;li&gt;Each &lt;span class=&quot;highlight-text&quot;&gt;call&lt;/span&gt; to a Hook gets isolated state.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 21 Dec 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/react-11/</link>
+        <guid isPermaLink="true">http://localhost:4000/react-11/</guid>
+        
+        <category>React</category>
+        
+        <category>React Hooks</category>
+        
+        <category>JS Fundamentals</category>
+        
+        
+        <category>React</category>
+        
+        <category>Fundamentals</category>
+        
+        <category>front-end my love</category>
+        
+        <category>study notes</category>
+        
+        <category>new framework!</category>
+        
+      </item>
     
       <item>
         <title>Conditional Rendering</title>
@@ -1130,53 +1270,6 @@ foo(1,2,3,4,5) // [3,4,5]
         <pubDate>Thu, 17 Dec 2020 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/react-02/</link>
         <guid isPermaLink="true">http://localhost:4000/react-02/</guid>
-        
-        <category>React</category>
-        
-        <category>JS Fundamentals</category>
-        
-        
-        <category>React</category>
-        
-        <category>Fundamentals</category>
-        
-        <category>front-end my love</category>
-        
-        <category>study notes</category>
-        
-        <category>new framework!</category>
-        
-      </item>
-    
-      <item>
-        <title>Intro to React</title>
-        <description>&lt;p&gt;短篇 React 學習筆記。&lt;/p&gt;
-
-&lt;h2 id=&quot;intro-to-react&quot;&gt;Intro to React&lt;/h2&gt;
-
-&lt;p&gt;React = JS library for building user interfaces or UI components.&lt;/p&gt;
-
-&lt;h4 id=&quot;features&quot;&gt;Features&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;JSX - JavaScript Syntax Extension&lt;/li&gt;
-  &lt;li&gt;Virtual DOM&lt;/li&gt;
-  &lt;li&gt;One way data binding&lt;/li&gt;
-  &lt;li&gt;Extensions&lt;/li&gt;
-  &lt;li&gt;Debugging&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;advantages--limitations&quot;&gt;Advantages &amp;amp; Limitations&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Virtual DOM&lt;/strong&gt;: React uses virtual DOM which is a JS object. This will improve apps performance, since JS virtual DOM is faster than regular DOM. 
-&lt;strong&gt;Usability&lt;/strong&gt;:React can be used on client and server sides as well as with other frameworks (i.e. NativeScript).
-&lt;strong&gt;Maintenance&lt;/strong&gt;:Component and data patterns improve readability, which helps to maintain larger apps.&lt;/p&gt;
-
-&lt;p&gt;But React covers only the view part of the app. So to complete the entire development we would have to choose other technologies.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 17 Dec 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/react-01/</link>
-        <guid isPermaLink="true">http://localhost:4000/react-01/</guid>
         
         <category>React</category>
         
