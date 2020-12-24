@@ -53,6 +53,10 @@
 <lastmod>2020-12-21T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/react-vs-angular-part-1/</loc>
+<lastmod>2020-12-24T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -84,6 +88,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/category/study-notes/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/category/observation/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/category/analysis-notes/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/category/trends/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>

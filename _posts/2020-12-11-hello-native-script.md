@@ -132,9 +132,11 @@ NS 是用了來自 Google 的 JavaScript V8 virtual machine、Runtime & bridge m
 
 NS 其實有一套類似 XML 的 UI 寫法，拿大家最熟悉的按鈕來說，一個按鈕就是:
 
-```
+{% raw %}
+```javascript
 <Button (tap)="onTap()" class="btn-primary" />
 ```
+{% endraw %}
 
 再配合 CSS、 ScSS 的結合，就可以把 UI 繪製出來！
 
