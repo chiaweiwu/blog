@@ -133,7 +133,7 @@ NS 是用了來自 Google 的 JavaScript V8 virtual machine、Runtime & bridge m
 NS 其實有一套類似 XML 的 UI 寫法，拿大家最熟悉的按鈕來說，一個按鈕就是:
 
 {% raw %}
-```javascript
+```js
 <Button (tap)="onTap()" class="btn-primary" />
 ```
 {% endraw %}
